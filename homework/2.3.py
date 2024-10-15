@@ -22,25 +22,19 @@ def sort_nested_list(nested_list):
         sublist.sort(key=len, reverse=True)  # 对每个子列表按照长度降序排序
     return nested_list
 
-# 主程序
-def main():
-    n = int(input("请输入列表个数 n: "))
-    m = int(input("请输入字符串最大长度 m: "))
-    
-    # 生成嵌套列表
-    nested_list = generate_nested_list(n, m)
-    
-    print("\n生成的嵌套列表:")
-    for sublist in nested_list:
-        print(sublist)
-    
-    # 排序嵌套列表
-    sorted_nested_list = sort_nested_list(nested_list)
-    
-    print("\n排序后的嵌套列表:")
-    for sublist in sorted_nested_list:
-        print(sublist)
 
-# 运行主程序
-if __name__ == "__main__":
-    main()
+n = int(input("请输入列表个数 n: "))
+m = int(input("请输入字符串最大长度 m: "))
+        
+ # 生成嵌套列表
+nested_list = generate_nested_list(n, m)
+        
+print("\n生成的嵌套列表:")
+for sublist in nested_list:
+    print(sublist)
+        
+sorted_nested_list = sort_nested_list(nested_list)
+        
+print("\n排序后的嵌套列表:")
+for sublist in sorted_nested_list:
+    print(sublist)

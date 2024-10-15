@@ -61,3 +61,13 @@ class Classroom:
             print(f"排名 {rank} - 学号: {student.student_id}, 姓名: {student.name}, "
                   f"性别: {student.gender}, 年龄: {student.age}, 成绩: {student.scores}, "
                   f"平均成绩: {student.average_score():.2f}")
+            
+classroom = Classroom()
+classroom.load_students_from_file('students.csv') 
+
+
+classroom.update_score('1', 'English', 95)
+
+
+classroom.calculate_ranking()
+

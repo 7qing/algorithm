@@ -32,3 +32,15 @@ class Myqueue:
             return self.data.pop(0)  # 移除并返回队列的第一个元素
         else:
             raise IndexError("队列为空，无法弹出元素")  # 抛出异常
+        
+
+N = 3
+queue = Myqueue(N)
+print(queue.empty())
+print(queue.full())
+queue.push(1)
+print(queue.top())
+queue.push(2)
+print(queue.top())
+queue.pop()
+print(queue.top())

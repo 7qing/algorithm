@@ -38,6 +38,5 @@ class Bicycle(Vehicle):
 
 bike =Bicycle(100,10,2)
 print (bike.get_max_speed())
-print (bike.height)
-bike.height = 3
-print(bike.height)
+bike.set_max_speed(120)
+print (bike.get_max_speed())
