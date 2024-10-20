@@ -7,11 +7,6 @@ using namespace std;
 class Solution
 {
 public:
-#include <vector>
-#include <algorithm>
-
-    using namespace std;
-
     vector<vector<int>> merge(vector<vector<int>> &intervals)
     {
         int n = intervals.size();
