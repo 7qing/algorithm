@@ -5,24 +5,26 @@
 
 using namespace std;
 
-int smallestRangeI(vector<int> nums, int k)
+double findMaxAverage(vector<int> nums, int k)
 {
-    int mi1 = INT_MAX;
-    int mi2 = INT_MAX;
+    int res;
+    int val = 0;
     int n = nums.size();
-    for (int i; i < n; i++)
-        mi1 = min(nums[i], mi1);
-    for (int i; i < n; i++)
+    int left = 0;
+    int right = 0;
+    for (; right < k; right++)
+        val += nums[right];
+    res = val;
+    for (; right < n; right++)
     {
-        int x = min(nums[i], mi2);
-        mi2 = x > mi1 ? x : mi2;
+        val = val + nums[right] - nums[left++];
+        res = max(val, res);
     }
-    int res = mi2 - mi1 - 2 * k;
-    return res > 0 ? res : 0;
+    return ((double)(res)) / ((double)k);
 }
 int main()
 {
-    int a = smallestRangeI({0, 10}, 2);
+    double a = findMaxAverage({1, 12, -5, -6, 50, 3}, 4);
     cout << a;
     return 0;
 }
